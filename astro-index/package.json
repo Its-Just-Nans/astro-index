@@ -1,0 +1,32 @@
+{
+    "name": "astro-index",
+    "workspaces": [
+        "demo",
+        "astro-index"
+    ],
+    "description": "Astro component to render a apache like index",
+    "homepage": "https://github.com/Its-Just-Nans/astro-index",
+    "version": "1.0.1",
+    "type": "module",
+    "exports": {
+        ".": "./index.ts",
+        "./astro": "./src/AstroIndex.astro"
+    },
+    "files": [
+        "src",
+        "index.ts"
+    ],
+    "keywords": [
+        "astro-component",
+        "index",
+        "apache-index"
+    ],
+    "scripts": {},
+    "devDependencies": {
+        "astro": "^4.5.16"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.5.10",
+        "typescript": "^5.4.4"
+    }
+}
