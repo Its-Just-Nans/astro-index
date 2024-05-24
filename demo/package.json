@@ -9,6 +9,7 @@
         "preview": "astro preview",
         "astro": "astro"
     },
+    "license": "MIT",
     "dependencies": {
         "@astrojs/check": "^0.5.10",
         "astro": "^4.6.1",
