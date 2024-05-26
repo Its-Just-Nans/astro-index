@@ -24,8 +24,9 @@
     "scripts": {},
     "license": "MIT",
     "devDependencies": {
-        "astro": "^4.5.16",
         "@astrojs/check": "^0.5.10",
-        "typescript": "^5.4.4"
+        "astro": "^4.5.16",
+        "typescript": "^5.4.4",
+        "@types/node": "^20.12.12"
     }
 }
