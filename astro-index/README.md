@@ -1,4 +1,4 @@
-# astro-index
+# astro-index [![download count](https://img.shields.io/npm/dw/astro-index) ![version](https://img.shields.io/npm/v/astro-index)](https://www.npmjs.com/package/astro-index)
 
 `apache2` like index in Astro. Useful for listing files in a directory.
 
@@ -10,7 +10,7 @@ Demo : <https://its-just-nans.github.io/astro-index/>
 
 ```astro
 ---
-import AstroIndex from "../../../astro-index";
+import AstroIndex from "astro-index";
 ---
 
 <AstroIndex path="public/test" />
