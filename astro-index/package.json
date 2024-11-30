@@ -4,9 +4,9 @@
         "demo",
         "astro-index"
     ],
-    "description": "Astro component to render a apache like index",
+    "description": "Astro component to render a apache like index #withastro",
     "homepage": "https://github.com/Its-Just-Nans/astro-index",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "type": "module",
     "exports": {
         ".": "./index.ts",
