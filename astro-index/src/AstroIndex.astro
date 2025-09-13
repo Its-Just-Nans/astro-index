@@ -13,9 +13,9 @@ const fullTitle = `Index of ${title}`;
 {
     full ? (
         <BasicHtml title={fullTitle}>
-            <Indexer title={fullTitle} {...Astro.props} />
+            <Indexer {...Astro.props} title={fullTitle} />
         </BasicHtml>
     ) : (
-        <Indexer title={fullTitle} {...Astro.props} />
+        <Indexer {...Astro.props} title={fullTitle} />
     )
 }

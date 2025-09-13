@@ -6,7 +6,13 @@ const pathExpose = join(process.cwd(), "public");
 ---
 
 <Layout title="astro-index demo">
-    <AstroIndex path={pathExpose} full={false} preview={true} previewUrl={import.meta.env.BASE_URL} title={"public/"}/>
+    <AstroIndex
+        path={pathExpose}
+        full={false}
+        preview={true}
+        previewUrl={import.meta.env.BASE_URL}
+        title={" public/"}
+    />
 </Layout>
 
 <style>

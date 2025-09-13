@@ -2,7 +2,7 @@
     "name": "astro-index",
     "description": "Astro component to render a apache like index #withastro",
     "homepage": "https://github.com/Its-Just-Nans/astro-index",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "type": "module",
     "exports": {
         ".": "./index.ts",
