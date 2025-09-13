@@ -1,11 +1,8 @@
 ---
-import Indexer from "./Indexer.astro";
+import Indexer, { IndexerProps } from "./Indexer.astro";
 import BasicHtml from "./BasicHtml.astro";
 
-interface Props {
-    path: string;
-    title?: string;
-    address?: string;
+interface Props extends IndexerProps {
     full?: boolean;
 }
 const { path = ".", title = path, full = true } = Astro.props;

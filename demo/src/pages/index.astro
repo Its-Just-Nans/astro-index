@@ -1,10 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AstroIndex from "../../../astro-index";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const pathExpose = join(__dirname, "../../public");
 ---
 
 <Layout title="astro-index demo">
-    <AstroIndex path="../astro-index/src/assets/" full={false} />
+    <AstroIndex path={pathExpose} full={false} preview={true} previewUrl={import.meta.env.BASE_URL} />
 </Layout>
 
 <style>
