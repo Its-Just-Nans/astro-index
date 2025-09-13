@@ -1,10 +1,10 @@
 ---
-import fs from "fs";
-import fsp from "fs/promises";
+import { existsSync, statSync } from "fs";
+import { readdir } from "fs/promises";
+import { join } from "path";
 import BackImg from "./assets/back.gif";
 import FolderImg from "./assets/folder.gif";
 import UnknownImg from "./assets/unknown.gif";
-import { join } from "path";
 
 interface Props {
     path: string;
@@ -15,11 +15,11 @@ const { path = ".", title = `Index of ${path}`, address } = Astro.props;
 if (!path) {
     throw new Error("path is required");
 }
-if (!fs.existsSync(path)) {
+if (!existsSync(path)) {
     throw new Error(`astro-index path ${path} does not exist`);
 }
 
-const files = (await fsp.readdir(path)).sort();
+const files = (await readdir(path)).sort();
 ---
 
 <h1>{title}</h1>
@@ -47,15 +47,16 @@ const files = (await fsp.readdir(path)).sort();
     </tr>
     {
         files.map((file) => {
-            const stat = fs.statSync(join(path, file));
+            const stat = statSync(join(path, file));
             const isFolder = stat.isDirectory();
+            const filePath = isFolder ? `${file}/` : file;
             return (
                 <tr>
                     <td valign="top">
                         <img src={isFolder ? FolderImg.src : UnknownImg.src} alt="[]" />
                     </td>
                     <td>
-                        <a href={file}>{file}</a>
+                        <a href={filePath}>{file}</a>
                     </td>
                     <td align="right">{stat.mtime.toISOString()}</td>
                     <td align="right">{stat.size}</td>

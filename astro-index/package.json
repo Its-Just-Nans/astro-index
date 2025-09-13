@@ -1,12 +1,8 @@
 {
     "name": "astro-index",
-    "workspaces": [
-        "demo",
-        "astro-index"
-    ],
     "description": "Astro component to render a apache like index #withastro",
     "homepage": "https://github.com/Its-Just-Nans/astro-index",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "type": "module",
     "exports": {
         ".": "./index.ts",
@@ -19,7 +15,8 @@
     "keywords": [
         "astro-component",
         "index",
-        "apache-index"
+        "apache-index",
+        "withastro"
     ],
     "scripts": {},
     "license": "MIT",
