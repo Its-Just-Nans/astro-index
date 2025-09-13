@@ -1,11 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AstroIndex from "../../../astro-index";
-import { dirname, join } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const pathExpose = join(__dirname, "../../public");
+import { join } from "path";
+const pathExpose = join(process.cwd(), "public");
 ---
 
 <Layout title="astro-index demo">
