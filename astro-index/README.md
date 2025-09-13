@@ -11,9 +11,11 @@ Demo : <https://its-just-nans.github.io/astro-index/>
 ```astro
 ---
 import AstroIndex from "astro-index";
+import { join } from "path";
+const pathExpose = join(process.cwd(), "public");
 ---
 
-<AstroIndex path="public/test" />
+<AstroIndex path={pathExpose} />
 ```
 
 ## License
