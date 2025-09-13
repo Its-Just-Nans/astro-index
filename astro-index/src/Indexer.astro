@@ -111,7 +111,7 @@ const files = (await readdir(path)).sort();
                                             <img src={previewFile} alt={`${file} preview`} />
                                         </span>
                                     )}
-                                    {VIEWABLE_EXTS.includes(ext) && <iframe src={filePath} title={file} />}
+                                    {VIEWABLE_EXTS.includes(ext) && <iframe src={previewFile} title={file} />}
                                 </>
                             )}
                         </a>
