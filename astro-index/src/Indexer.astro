@@ -24,7 +24,7 @@ interface Props extends IndexerProps {}
 
 const {
     path = ".",
-    recursiveBase = ".",
+    recursiveBase = null,
     title = `Index of ${path}`,
     preview,
     previewUrl = path,
@@ -130,7 +130,7 @@ const css =
     </tr>
     {
         files.map((file) => {
-            const currentFolder = relative(recursiveBase, path);
+            const currentFolder = recursiveBase === null ? "" : relative(recursiveBase, path);
             const fullPath = join(path, file);
             const stat = statSync(fullPath);
             const isFolder = stat.isDirectory();
