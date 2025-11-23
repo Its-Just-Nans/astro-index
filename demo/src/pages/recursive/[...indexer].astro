@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AstroIndex, { walkDirs } from "../../../../astro-index";
+import { join, relative } from "path";
+
+const base = join(process.cwd(), "public");
+
+export async function getStaticPaths() {
+    // const astroSrc = "recursive";
+    const base = join(process.cwd(), "public");
+    const dirs = walkDirs(base);
+
+    const paths = dirs.map((full) => {
+        const p = relative(base, full);
+        const pFilter = p === "" ? undefined : p;
+        return {
+            params: { indexer: pFilter },
+        };
+    });
+    return paths;
+}
+const { indexer } = Astro.params;
+const pathIndex = indexer ?? "/";
+const pathExpose = join(base, pathIndex);
+---
+
+<Layout title="astro-index recursive demo">
+    <AstroIndex
+        recursiveBase={base}
+        path={pathExpose}
+        full={false}
+        preview={true}
+        previewUrl={import.meta.env.BASE_URL}
+        title={" public/"}
+        pixelated={true}
+    />
+</Layout>

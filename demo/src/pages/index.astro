@@ -1,33 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import AstroIndex from "../../../astro-index";
-import { join } from "path";
-const pathExpose = join(process.cwd(), "public");
 ---
 
 <Layout title="astro-index demo">
-    <AstroIndex
-        path={pathExpose}
-        full={false}
-        preview={true}
-        previewUrl={import.meta.env.BASE_URL}
-        title={" public/"}
-        pixelated={true}
-    />
+    <a href="simple/"> iframe of simple example </a>
+    <iframe class="frame" src="simple/" width="100%" height="400px"></iframe>
+    <hr />
+    <a href="recursive/"> iframe of recursive example </a>
+    <iframe class="frame" src="recursive/" width="100%" height="400px"></iframe>
 </Layout>
-
-<style>
-    .chart {
-        margin: auto;
-        max-width: 55%;
-    }
-    div {
-        text-align: center;
-    }
-    code {
-        background-color: lightgray;
-        padding: 10px;
-        margin: 10px;
-        display: inline-block;
-    }
-</style>

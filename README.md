@@ -2,9 +2,13 @@
 
 `apache2` like index in Astro. Useful for listing files in a directory.
 
-> Does not generate the tree full !
+> Does not generate the tree full by default, see the demo for more info.
 
-Demo : <https://its-just-nans.github.io/astro-index/>
+Links:
+
+- <https://its-just-nans.github.io/astro-index/> - all demos
+- <https://its-just-nans.github.io/astro-index/simple/> - simple demo
+- <https://its-just-nans.github.io/astro-index/recursive/> - recursive demo
 
 ## Usage
 

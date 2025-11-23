@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AstroIndex from "../../../../astro-index";
+import { join } from "path";
+const pathExpose = join(process.cwd(), "public");
+---
+
+<Layout title="astro-index simple demo">
+    <AstroIndex
+        path={pathExpose}
+        full={false}
+        preview={true}
+        previewUrl={import.meta.env.BASE_URL}
+        title={" public/"}
+        pixelated={true}
+    />
+</Layout>
