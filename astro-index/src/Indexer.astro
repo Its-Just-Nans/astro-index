@@ -134,7 +134,7 @@ const css =
             const fullPath = join(path, file);
             const stat = statSync(fullPath);
             const isFolder = stat.isDirectory();
-            const filePath = isFolder ? `${file}/` : file;
+            const filePath = isFolder ? `${file}/` : join(previewUrl, currentFolder, file);
             const ext = isFolder ? null : file.split(".").pop()?.toLowerCase();
             const previewFile = join(previewUrl, currentFolder, file);
             return (
