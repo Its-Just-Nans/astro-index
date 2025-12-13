@@ -3,9 +3,48 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="astro-index demo">
-    <a href="simple/"> iframe of simple example </a>
-    <iframe class="frame" src="simple/" width="100%" height="400px"></iframe>
-    <hr />
-    <a href="recursive/"> iframe of recursive example </a>
-    <iframe class="frame" src="recursive/" width="100%" height="400px"></iframe>
+    <div class="title">
+        <a href="https://github.com/Its-Just-Nans/astro-index" target="_blank"
+            >https://github.com/Its-Just-Nans/astro-index</a
+        >
+    </div>
+    <div class="flex">
+        <div class="example">
+            <a href="simple/" target="_blank">iframe of simple example</a>
+            <iframe class="frame" src="simple/" height="400px"></iframe>
+        </div>
+        <div class="example">
+            <a href="recursive/" target="_blank">iframe of recursive example</a>
+            <iframe class="frame" src="recursive/" height="400px"></iframe>
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .flex {
+        display: flex;
+    }
+    .example {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    .example > iframe {
+        width: 70%;
+    }
+    @media screen and (max-width: 1024px) {
+        .flex {
+            flex-direction: column;
+        }
+        .example > iframe {
+            width: 100%;
+        }
+    }
+</style>
