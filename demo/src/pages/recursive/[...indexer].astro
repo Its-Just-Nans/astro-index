@@ -22,6 +22,7 @@ export async function getStaticPaths() {
 const { indexer } = Astro.params;
 const pathIndex = indexer ?? "/";
 const pathExpose = join(base, pathIndex);
+const titlePath = pathExpose.replace(base, "").substring(1);
 ---
 
 <Layout title="astro-index recursive demo">
@@ -31,7 +32,7 @@ const pathExpose = join(base, pathIndex);
         full={false}
         preview={true}
         previewUrl={import.meta.env.BASE_URL}
-        title={"recursive public/"}
+        title={`recursive public/${titlePath}`}
         pixelated={true}
     />
 </Layout>
